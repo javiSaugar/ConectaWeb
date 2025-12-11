@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------- */
+/* Estilos Generales del Cuerpo */
+body {
+    background-color: #0f172a;
+    color: #e2e8f0; 
+}
+/* ------------------------------------------------------------------- */
+/* Clases de Degradado */
+.gradient-text {
+    background-image: linear-gradient(45deg, #9333ea, #3b82f6);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+/* Degradado para botones */
+.gradient-bg {
+    background: linear-gradient(45deg, #9333ea, #3b82f6);
+}
+/* ------------------------------------------------------------------- */
+/* FIX DEFINITIVO PARA EMOJIS */
+.emoji-display {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    color: inherit !important;
+}
