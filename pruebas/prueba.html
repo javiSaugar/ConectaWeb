@@ -5,125 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta - Alcorcón</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/prueba.css">
-    <script src="./js/prueba.js" defer></script>
+   <link rel="stylesheet" href="./css/prueba.css">
 </head>
 <body>
-
-      <!--Cabecera -->
-    <header class="p-4 sm:p-6 shadow-lg">
+    <!--Cabecera-->
+    <header class="fixed w-full z-50 p-4 sm:p-6 shadow-lg bg-slate-900/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-extrabold gradient-text">Conecta</h1>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                 <!--Links barra de arriba -->
-                <a href="#caracteristicas" class="hover:text-primary-blue transition duration-300">Características</a>
-                <a href="./saberMas.html" class="hover:text-primary-blue transition duration-300">Saber más</a>
-                <a href="#contacto" class="hover:text-primary-blue transition duration-300">Contacto</a>
-                 <a href="#App1" class="hover:text-primary-blue transition duration-300">APP 1</a>
-                  <a href="#App2" class="hover:text-primary-blue transition duration-300">APP 2</a>
-                   <a href="#App3" class="hover:text-primary-blue transition duration-300">APP 3</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#caracteristicas" class="hover:text-[#22c55e] transition duration-300">Características</a>
+                <a href="./saberMas.html" class="hover:text-[#f97316] transition duration-300">Saber más</a>
+                <a href="#contacto" class="hover:text-[#3b82f6] transition duration-300">Contacto</a>
             </nav>
         </div>
     </header>
-
-    <!-- Sección  Principal -->
-    <section class="py-16 md:py-32">
+    <!--sección Descripción-->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-emerald-900/20 via-slate-900 to-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!--  degradado -->
-            <h2 class="text-5xl sm:text-7xl font-extrabold mb-6 leading-tight">
-                <span class="gradient-text block">La union de Alcorcón,</span>
-                <span class="block">en la palma de tu mano.</span>
+            <h2 class="text-5xl sm:text-7xl font-extrabold mb-8 leading-tight">
+                <span class="gradient-text block">La unión de Alcorcón,</span>
+                <span class="block text-white">en la palma de tu mano.</span>
             </h2>
                 
-            <!-- pagina saber mas -->
-            <a href="./saberMas.html" class="inline-block gradient-bg text-white font-bold py-3.5 px-10 rounded-xl text-lg transition duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/50">
-                !Saber más Conecta!
+            <a href="./saberMas.html" class="inline-block gradient-bg text-white font-bold py-4 px-12 rounded-2xl text-lg transition duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.4)]">
+                ¡Saber más Conecta!
             </a>
-             <!--
-             Placeholder de Mockup de la App 
-            <div class="mt-16">
-                 Usamos un placeholder visual que sigue la paleta de colores 
-                <div class="bg-slate-800 rounded-3xl p-6 md:p-12 max-w-4xl mx-auto shadow-2xl border border-primary-purple/50">
-                    <div class="h-64 sm:h-96 w-full rounded-2xl gradient-bg flex items-center justify-center">
-                        <svg class="w-16 h-16 text-white opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                       
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
-
-     <!-- Sección de Aplicaciones -->
-    <section id="caracteristicas" class="py-20 md:py-24 bg-slate-800/50">
+    <!--Sección APPS-->
+    <section id="caracteristicas" class="py-24 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-4xl font-bold text-center mb-16">Aplicaciones </h3>
-            <div class="grid md:grid-cols-3 gap-10">
-
-                <!-- App deportiva -->
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border-t-4 border-primary-purple transition duration-300 hover:shadow-primary-purple/30">
-                    <div class="text-4xl mb-4 ">
-                        <span class="inline-block emoji-display">
-                            ⚽</span>
+            <h3 class="text-4xl font-bold text-center mb-16">Nuestras Aplicaciones</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#22c55e]/50 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-[#22c55e]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        ⚽
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Unete a nuestra comunidad deportiva</h4>
-                    <p class="text-slate-400">Conecta con tu equipo y potencia el espíritu deportivo. Únete a grupos, coordina entrenamientos y vive la pasión del deporte acompañado.</p>
+                    <h4 class="text-xl font-bold mb-3 text-[#22c55e]">Comunidad deportiva</h4>
+                    <p class="text-slate-400 leading-relaxed">Conecta con tu equipo y potencia el espíritu deportivo. Únete a grupos, coordina entrenamientos y vive la pasión del deporte acompañado.</p>
                 </div>
 
-                <!-- App mayores -->
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border-t-4 border-primary-blue transition duration-300 hover:shadow-primary-blue/30">
-                    <div class="text-4xl mb-4 ">
-                        <span class="inline-block emoji-display">
-                            👴
-                        </span>
+                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#f97316]/50 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-[#f97316]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        👴
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Ayudemos a nuestros mayores</h4>
-                    <p class="text-slate-400">Unamos generaciones para crear comunidad. Participa en actividades que conectan a jóvenes y mayores, fomentando el apoyo mutuo, la compañía y el aprendizaje compartido.</p>
+                    <h4 class="text-xl font-bold mb-3 text-[#f97316]">Apoyo a mayores</h4>
+                    <p class="text-slate-400 leading-relaxed">Unamos generaciones para crear comunidad. Participa en actividades que conectan a jóvenes y mayores, fomentando el apoyo mutuo y la compañía.</p>
                 </div>
 
-                <!--  App rutas  -->
-                <div class="bg-slate-900 p-8 rounded-2xl shadow-xl border-t-4 border-primary-purple transition duration-300 hover:shadow-purple-500/30">
-                    <div class="text-4xl mb-4 ">
-                        <span class="inline-block emoji-display">
-                            ♿
-                            <!-- <img src="./iconos/accesibilidad-para-sillas-de-ruedas.png" alt="">-->
-                        </span>
+                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#3b82f6]/50 transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-[#3b82f6]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        ♿
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Creemos un Alcorcón más accesible</h4>
-                    <p class="text-slate-400">Construyamos juntos un Alcorcón sin barreras. Comparte y descubre rutas accesibles que faciliten la movilidad de todos, haciendo nuestra ciudad más cómoda e inclusiva.</p>
+                    <h4 class="text-xl font-bold mb-3 text-[#3b82f6]">Alcorcón Accesible</h4>
+                    <p class="text-slate-400 leading-relaxed">Construyamos juntos un Alcorcón sin barreras. Comparte y descubre rutas accesibles que faciliten la movilidad de todos los ciudadanos.</p>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- Sección descarga 
-    <section id="descarga" class="py-20 md:py-24">
-          
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-4xl font-bold mb-6">Lista para instalar en tu dispositivo</h3>
-            <p class="text-lg text-slate-400 mb-10">Descarga Conecta para iOS o Android y empieza a simplificar tu vida digital hoy mismo.</p>
-
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                Botón App Store
-                <a href="#" class="inline-flex items-center justify-center gradient-bg text-white font-semibold py-3 px-8 rounded-lg shadow-xl hover:opacity-90 transition duration-300">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 15.6c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm-3 9c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zM9 16c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zm0-3c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zM9 7c-.6 0-1-.5-1-1s.5-1 1-1c.6 0 1 .5 1 1s-.4 1-1 1zM20 2v20H4V2h16zM6 4v16h12V4H6z"></path></svg>
-                    App Store
-                </a>
-
-                 Botón Google Play 
-                <a href="#" class="inline-flex items-center justify-center bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg shadow-xl hover:bg-slate-600 transition duration-300">
-                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 21l-3 3 14 0-3-3H7zm11-13c0-3.31-2.69-6-6-6s-6 2.69-6 6 2.69 6 6 6 6-2.69 6-6zm-6 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
-                    Google Play
-                </a>
+    <!--Pie de pagina-->
+    <footer id="contacto" class="bg-slate-950 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-6">
+                <span class="text-2xl font-bold gradient-text">Conecta</span>
             </div>
-        </div>
-    </section>
--->
-    <!-- Pie de Página -->
-    <footer id="contacto" class="bg-slate-900/80 mt-16 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
-            <p>&copy; 2025 Conecta App. Todos los derechos reservados.</p>
-            <p class="mt-2 text-sm">Contáctanos en <a href="mailto:pepito33@PAlotes.net" class="hover:text-primary-purple transition duration-300">info@conecta.app</a></p>
+            <p class="text-slate-500">&copy; 2025 Conecta App. Todos los derechos reservados.</p>
+            <p class="mt-4 text-sm text-slate-400">
+                ¿Tienes dudas? <a href="mailto:info@conecta.app" class="text-[#f97316] hover:underline">Escríbenos aquí</a>
+            </p>
         </div>
     </footer>
 
