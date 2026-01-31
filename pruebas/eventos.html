@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Conecta Alcorcón</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/prueba.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #22c55e, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body { background-color: #020617; color: white; }
+    </style>
+</head>
+<body>
+    <header class="fixed w-full z-50 p-4 shadow-lg bg-slate-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="./prueba.html" class="text-2xl font-extrabold gradient-text">Conecta</a>
+            <a href="./prueba.html" class="text-sm text-slate-400 hover:text-white transition">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center">Agenda de Actividades <span class="text-[#22c55e]">Alcorcón</span></h2>
+
+            <div class="space-y-4">
+                
+                <div class="flex flex-col md:flex-row items-center bg-slate-900/50 p-6 rounded-2xl border border-white/5 gap-6">
+                    <div class="flex-shrink-0 text-center md:border-r md:border-white/10 md:pr-6">
+                        <span class="block text-2xl font-bold text-[#22c55e]">15</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-500">Feb</span>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded">Deportes</span>
+                        <h3 class="text-xl font-semibold mt-1">Torneo de Fútbol 7 Local</h3>
+                        <p class="text-slate-400 text-sm">Polideportivo Los Cantos · 09:00h a 14:00h</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center bg-slate-900/50 p-6 rounded-2xl border border-white/5 gap-6">
+                    <div class="flex-shrink-0 text-center md:border-r md:border-white/10 md:pr-6">
+                        <span class="block text-2xl font-bold text-[#f97316]">20</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-500">Feb</span>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Mayores</span>
+                        <h3 class="text-xl font-semibold mt-1">Taller Intergeneracional de Pintura</h3>
+                        <p class="text-slate-400 text-sm">Centro Cívico Viñagrande · 17:30h</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center bg-slate-900/50 p-6 rounded-2xl border border-white/5 gap-6">
+                    <div class="flex-shrink-0 text-center md:border-r md:border-white/10 md:pr-6">
+                        <span class="block text-2xl font-bold text-[#3b82f6]">01</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-500">Mar</span>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-blue-500 bg-blue-500/10 px-2 py-1 rounded">Accesibilidad</span>
+                        <h3 class="text-xl font-semibold mt-1">Revisión de Rutas Accesibles</h3>
+                        <p class="text-slate-400 text-sm">Plaza del Ayuntamiento · 10:00h</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center bg-slate-900/50 p-6 rounded-2xl border border-white/5 gap-6 opacity-70">
+                    <div class="flex-shrink-0 text-center md:border-r md:border-white/10 md:pr-6">
+                        <span class="block text-2xl font-bold text-slate-400">05</span>
+                        <span class="text-xs uppercase tracking-widest text-slate-500">Mar</span>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 bg-white/5 px-2 py-1 rounded">General</span>
+                        <h3 class="text-xl font-semibold mt-1">Reunión de Vecinos Conecta</h3>
+                        <p class="text-slate-400 text-sm">Biblioteca Ciudad de Alcorcón · 19:00h</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-center mt-12 text-slate-500 text-xs">
+                * Estos eventos son informativos y están sujetos a cambios por los organizadores.
+            </p>
+        </div>
+    </main>
+
+    <footer class="py-8 border-t border-white/5 text-center text-slate-600 text-sm">
+        &copy; 2025 Conecta Alcorcón
+    </footer>
+</body>
+</html>
