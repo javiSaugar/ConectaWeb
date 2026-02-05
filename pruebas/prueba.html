@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta - Alcorcón</title>
+    <link rel="icon" type="image/png" href="./iconos/LOGO-HC-_1_.png">
+
+    <title>Conecta</title>
     <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="./css/prueba.css">
 </head>
 <body>
     <!--Cabecera-->
-    <header class="fixed w-full z-50 p-4 sm:p-6 shadow-lg bg-slate-900/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold gradient-text">Conecta</h1>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="./saberMas.html" class="hover:text-[#f97316] transition duration-300">Saber más</a>
-                <a href="#contacto" class="hover:text-[#3b82f6] transition duration-300">Contacto</a>
-                 <a href="./eventos.html" class="hover:text-[#3b82f6] transition duration-300">Eventos</a>
-
-            </nav>
-        </div>
+    <header class="fixed w-full z-50 p-3 sm:p-4 shadow-lg bg-slate-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center"> 
+        <a href="#" class="relative flex items-center text-2xl font-extrabold gradient-text">
+          Conec+a
+        </a>
+        <nav class="hidden md:flex space-x-8 text-sm font-bold tracking-wide">
+            <a href="./saberMas.html" class="text-white/90 hover:text-[#f97316] transition duration-300">Saber más</a>
+            <a href="#contacto" class="text-white/90 hover:text-[#3b82f6] transition duration-300">Nuestras Apps</a>
+            <a href="./eventos.html" class="text-white/90 hover:text-[#3b82f6] transition duration-300">Eventos</a>
+        </nav>
+    </div>
     </header>
     <!--sección Descripción-->
     <section class="pt-32 pb-20 md:pt-48 md:pb-32 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-emerald-900/20 via-slate-900 to-slate-900">
@@ -39,27 +42,32 @@
             <h3 class="text-4xl font-bold text-center mb-16">Nuestras Aplicaciones</h3>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#22c55e]/50 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-[#22c55e]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
-                        ⚽
+               
+                <a href="./deporte.html">
+                    <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#B3E458]/50 transition-all duration-500 group">
+                        <div class="w-16 h-16 bg-[#B3E458]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                            ⚽
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-[#B3E458]">Comunidad deportiva</h4>
+                        <p class="text-slate-400 leading-relaxed">Conecta con tu equipo y potencia el espíritu deportivo. Únete a grupos, coordina entrenamientos y vive la pasión del deporte acompañado.</p>
                     </div>
-                    <h4 class="text-xl font-bold mb-3 text-[#22c55e]">Comunidad deportiva</h4>
-                    <p class="text-slate-400 leading-relaxed">Conecta con tu equipo y potencia el espíritu deportivo. Únete a grupos, coordina entrenamientos y vive la pasión del deporte acompañado.</p>
-                </div>
-
-                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#f97316]/50 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-[#f97316]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
-                        👴
+                </a>
+                <a href="./mayores.html">
+                    <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#FFB553]/50 transition-all duration-500 group">
+                        <div class="w-16 h-16 bg-[#f97316]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                            👴
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-[#FFB553]">Apoyo a mayores</h4>
+                        <p class="text-slate-400 leading-relaxed">Unamos generaciones para crear comunidad. Participa en actividades que conectan a jóvenes y mayores, fomentando el apoyo mutuo y la compañía.</p>
                     </div>
-                    <h4 class="text-xl font-bold mb-3 text-[#f97316]">Apoyo a mayores</h4>
-                    <p class="text-slate-400 leading-relaxed">Unamos generaciones para crear comunidad. Participa en actividades que conectan a jóvenes y mayores, fomentando el apoyo mutuo y la compañía.</p>
-                </div>
+                </a>
+                
 
-                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#3b82f6]/50 transition-all duration-500 group">
+                <div class="bg-slate-900 p-8 rounded-3xl border border-white/5 hover:border-[#5099F8]/50 transition-all duration-500 group">
                     <div class="w-16 h-16 bg-[#3b82f6]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
                         ♿
                     </div>
-                    <h4 class="text-xl font-bold mb-3 text-[#3b82f6]">Alcorcón Accesible</h4>
+                    <h4 class="text-xl font-bold mb-3 text-[#5099F8]">Alcorcón Accesible</h4>
                     <p class="text-slate-400 leading-relaxed">Construyamos juntos un Alcorcón sin barreras. Comparte y descubre rutas accesibles que faciliten la movilidad de todos los ciudadanos.</p>
                 </div>
             </div>
@@ -72,9 +80,10 @@
                 <span class="text-2xl font-bold gradient-text">Conecta</span>
             </div>
             <p class="text-slate-500">&copy; 2025 Conecta App. Todos los derechos reservados.</p>
+            <!--
             <p class="mt-4 text-sm text-slate-400">
                 ¿Tienes dudas? <a href="mailto:info@conecta.app" class="text-[#f97316] hover:underline">Escríbenos aquí</a>
-            </p>
+            </p>-->
         </div>
     </footer>
 

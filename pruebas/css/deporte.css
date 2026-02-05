@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.texto_deporte{
+    color: #B3E458;
+}
+.deporte-bg {
+    background: linear-gradient(45deg, #B3E458, #D6F2A1);
+}
+

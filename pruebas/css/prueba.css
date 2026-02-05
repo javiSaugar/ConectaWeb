@@ -7,7 +7,7 @@ body {
 /* ------------------------------------------------------------------- */
 /* Clases de Degradado */
 .gradient-text {
-    background-image: linear-gradient(45deg, #22c55e, #f97316, #3b82f6);
+    background-image: linear-gradient(45deg, #B3E458, #5099F8, #FFB553);
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -18,7 +18,7 @@ body {
 
 /* Degradado para botones */
 .gradient-bg {
-    background: linear-gradient(45deg, #22c55e, #f97316, #3b82f6);
+    background: linear-gradient(45deg, #B3E458, #5099F8, #FFB553);
 }
 /* ------------------------------------------------------------------- */
 /* FIX DEFINITIVO PARA EMOJIS */
@@ -32,7 +32,7 @@ body {
 }
  /* Colores de acento basados en tu gradiente para Tailwind */
         :root {
-            --color-verde: #22c55e;
-            --color-naranja: #f97316;
-            --color-azul: #3b82f6;
+            --color-verde: #B3E458;
+            --color-naranja: #FFB553;
+            --color-azul: #5099F8;
         }
