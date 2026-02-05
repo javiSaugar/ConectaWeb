@@ -1,4 +1,5 @@
 const url = "https://hackathon.lausnchez.es/api/v1/eventosweb/";
+temporizador();
 getEventos()
 function getEventos(){
     let hoy = new Date();
@@ -46,7 +47,7 @@ function getEventos(){
             h3Nombre.classList.add("text-xl", "font-semibold", "mt-1")
             pFechaHora.classList.add("text-slate-400", "text-sm")
             divTarjeta.append(divDia,divDatos)
-            if(dato.fecha_inicio_evento < hoy){
+            if(fecha < hoy){
                 spanCategoria.classList.add("text-[10px]", "font-bold", 
                         "uppercase", "tracking-wider", "text-gray-400", "bg-gray-400/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "text-gray-400");
@@ -54,6 +55,7 @@ function getEventos(){
             }else{
                 spanCategoria.classList.remove();
                 spanDia.classList.remove();
+                
                 if(dato.categoria.nombre == "Deportes"){
                     spanCategoria.classList.add("text-[10px]", "font-bold", 
                         "uppercase", "tracking-wider", "text-emerald-500", "bg-emerald-500/10", "px-2", "py-1", "rounded")
@@ -69,10 +71,40 @@ function getEventos(){
                          "bg-blue-500/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "texto-accesible")
                        spanCategoria.innerText += " ♿️"
+                }else{
+                    spanCategoria.classList.add("text-[10px]", "font-bold", "uppercase", "tracking-wider", "text-indigo-700",
+                         "bg-indigo-100", "px-2", "py-1", "rounded")
+                    spanDia.classList.add("block", "text-2xl", "font-bold", "text-indigo-700")
                 } 
             }
             document.querySelector("#eventos").append(divTarjeta)
         });
         
     });
+}
+
+
+function temporizador(){
+    let timerInterval;
+    Swal.fire({
+    title: "¡Estamos cargando lo eventos!",
+    html: "se cerrara <b></b>.",
+    theme:"dark",
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+        timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+    },
+    willClose: () => {
+        clearInterval(timerInterval);
+    }
+    }).then((result) => {
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+  }
+});
 }
