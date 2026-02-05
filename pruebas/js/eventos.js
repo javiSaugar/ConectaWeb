@@ -47,14 +47,17 @@ function getEventos(){
             pFechaHora.classList.add("text-slate-400", "text-sm")
             divTarjeta.append(divDia,divDatos)
             if(dato.fecha_inicio_evento < hoy){
-                alert("ha pasado")
+                spanCategoria.classList.add("text-[10px]", "font-bold", 
+                        "uppercase", "tracking-wider", "text-gray-400", "bg-gray-400/10", "px-2", "py-1", "rounded")
+                    spanDia.classList.add("block", "text-2xl", "font-bold", "text-gray-400");
+                 
             }else{
                 spanCategoria.classList.remove();
                 spanDia.classList.remove();
                 if(dato.categoria.nombre == "Deportes"){
                     spanCategoria.classList.add("text-[10px]", "font-bold", 
                         "uppercase", "tracking-wider", "text-emerald-500", "bg-emerald-500/10", "px-2", "py-1", "rounded")
-                    spanDia.classList.add("block", "text-2xl", "font-bold", "texto_deporte");
+                    spanDia.classList.add("block", "text-2xl", "font-bold", "text-emerald-500");
                 }
                 else if(dato.categoria.nombre == "Arte" ||dato.categoria.nombre ==  "Música"){
                     spanDia.classList.add("block", "text-2xl", "font-bold", "texto-mayores")
@@ -65,6 +68,7 @@ function getEventos(){
                     spanCategoria.classList.add("text-[10px]", "font-bold", "uppercase", "tracking-wider", "texto-accesible",
                          "bg-blue-500/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "texto-accesible")
+                       spanCategoria.innerText += " ♿️"
                 } 
             }
             document.querySelector("#eventos").append(divTarjeta)
