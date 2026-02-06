@@ -45,8 +45,8 @@ function getEventos(numero){
             spanMes.innerText = mes;
             divDia.append(spanDia,spanMes);    
             divDatos.append(spanCategoria,h3Nombre,pFechaHora)
-            divTarjeta.classList.add("flex", "flex-col","md:flex-row", "items-center", "bg-slate-900/50","p-6",
-                "rounded-2xl", "border", "border-white/5", "gap-6")
+            divTarjeta.classList.add("flex", "flex-col","md:flex-row", "items-center", "bg-blue-900/50","p-6",
+                "rounded-2xl", "border", "border-white/4", "gap-6")
             divDia.classList.add("flex-shrink-0", "text-center", "md:border-r", "md:border-white/10", "md:pr-6");
             spanMes.classList.add("text-xs", "uppercase", "tracking-widest", "text-slate-500");
             divDatos.classList.add("flex-grow", "text-center", "md:text-left")
@@ -54,7 +54,7 @@ function getEventos(numero){
             pFechaHora.classList.add("text-slate-400", "text-sm")
             divTarjeta.append(divDia,divDatos)
             if(fecha < hoy){
-                spanCategoria.classList.add("text-[10px]", "font-bold", 
+                spanCategoria.classList.add("text-[12px]", "font-bold", 
                         "uppercase", "tracking-wider", "text-gray-400", "bg-gray-400/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "text-gray-400");
                  
@@ -63,24 +63,24 @@ function getEventos(numero){
                 spanDia.classList.remove();
                 
                 if(dato.categoria.nombre == "Deportes"){
-                    spanCategoria.classList.add("text-[10px]", "font-bold", 
+                    spanCategoria.classList.add("text-[12px]", "font-bold", 
                         "uppercase", "tracking-wider", "text-emerald-500", "bg-emerald-500/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "text-emerald-500");
                 }
                 else if(dato.categoria.nombre == "Arte" ||dato.categoria.nombre ==  "Música"){
                     spanDia.classList.add("block", "text-2xl", "font-bold", "texto-mayores")
-                    spanCategoria.classList.add("text-[10px]", "font-bold", 
+                    spanCategoria.classList.add("text-[12px]", "font-bold", 
                         "uppercase", "tracking-wider", "texto-mayores", "bg-orange-500/10", "px-2", "py-1", "rounded")
                 }
                 else if(dato.es_accesible == true){
-                    spanCategoria.classList.add("text-[10px]", "font-bold", "uppercase", "tracking-wider", "texto-accesible",
+                    spanCategoria.classList.add("text-[12px]", "font-bold", "uppercase", "tracking-wider", "texto-accesible",
                          "bg-blue-500/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "texto-accesible")
-                       spanCategoria.innerText += " ♿️"
+                       spanCategoria.innerHTML += '  <span class="text-[15px]">♿</span>'
                 }else{
-                    spanCategoria.classList.add("text-[10px]", "font-bold", "uppercase", "tracking-wider", "text-indigo-700",
-                         "bg-indigo-400/10", "px-2", "py-1", "rounded")
-                    spanDia.classList.add("block", "text-2xl", "font-bold", "text-indigo-700")
+                    spanCategoria.classList.add("text-[12px]", "font-bold", "uppercase", "tracking-wider", "text-red-700",
+                         "bg-red-400/10", "px-2", "py-1", "rounded")
+                    spanDia.classList.add("block", "text-2xl", "font-bold", "text-red-700")
                 } 
             }
             document.querySelector("#eventos").append(divTarjeta)
@@ -133,12 +133,22 @@ function pagMas(){
             console.log("+")
             getEventos(numeroPagina)
         }else{
-          
-           
+            mensajeInfo("No disponemos de más eventos")
         }
       
     })
 
+}
+
+function mensajeInfo(mensaje){
+    Swal.fire({
+        position: "mid",
+        icon: "info",
+        title: mensaje,
+        showConfirmButton: false,
+        theme:"dark",
+        timer: 1500
+    });
 }
 
 function pagMenos(){
