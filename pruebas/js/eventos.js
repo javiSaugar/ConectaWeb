@@ -97,30 +97,50 @@ document.querySelector("#paginaMenos").addEventListener("click",()=>{
     pagMenos();
 })
 
-function temporizador(){
-    let timerInterval;
-    Swal.fire({
-    title: "¡Estamos cargando lo eventos!",
-    html: "se cerrara <b></b>.",
-    theme:"dark",
-    timer: 2000,
-    timerProgressBar: true,
+function temporizador() {
+  let timerInterval;
+  const tiempoTotal = 3000;
+
+  Swal.fire({
+    title: "¡Estamos cargando los eventos!",
+     color: "#0080FF",
+    background: "#16285a",
+    html: `
+      <div style="margin-top:10px">
+        <div id="progress-container">
+          <div id="progress-bar" style="
+            width:100%;
+            height:12px;
+            background:#0080FF;
+            border-radius:10px;
+            transition: width 0.1s linear;">
+          </div>
+        </div>
+        <p><b></b> ms restantes</p>
+      </div>
+    `,
+    showConfirmButton: false,
+    timer: tiempoTotal,
     didOpen: () => {
-        Swal.showLoading();
-        const timer = Swal.getPopup().querySelector("b");
-        timerInterval = setInterval(() => {
-        timer.textContent = `${Swal.getTimerLeft()}`;
-        }, 100);
+      const bar = document.getElementById("progress-bar");
+      const text = Swal.getPopup().querySelector("b");
+      const start = Date.now();
+
+      timerInterval = setInterval(() => {
+        const elapsed = Date.now() - start;
+        const restante = tiempoTotal - elapsed;
+        const porcentaje = (restante / tiempoTotal) * 100;
+
+        bar.style.width = porcentaje + "%";
+        text.textContent = Math.max(0, Math.floor(restante));
+      }, 100);
     },
     willClose: () => {
-        clearInterval(timerInterval);
+      clearInterval(timerInterval);
     }
-    }).then((result) => {
-    if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
-  }
-});
+  });
 }
+
 
 function pagMas(){
     let num = numeroPagina+1
@@ -133,7 +153,7 @@ function pagMas(){
             console.log("+")
             getEventos(numeroPagina)
         }else{
-            mensajeInfo("No disponemos de más eventos")
+           
         }
       
     })
