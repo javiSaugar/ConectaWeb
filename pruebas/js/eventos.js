@@ -123,8 +123,22 @@ function temporizador(){
 }
 
 function pagMas(){
-numeroPagina ++;
-getEventos(numeroPagina)
+    let num = numeroPagina+1
+     fetch(url+num)
+    .then((response) => response.json())
+    .then((datos) => {
+        console.log(datos.length)
+        if(datos.length > 0){
+            numeroPagina ++;
+            console.log("+")
+            getEventos(numeroPagina)
+        }else{
+          
+           
+        }
+      
+    })
+
 }
 
 function pagMenos(){
