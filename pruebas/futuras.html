@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./iconos/LOGO-HC-_1_.png">
+    <title>Conecta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/sabermas.js" defer></script>
+    <link rel="stylesheet" href="./css/prueba.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="p-4 sm:p-6 shadow-lg bg-slate-900 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="./prueba.html" class="text-3xl font-extrabold gradient-text">Conec+a</a>
+            <nav class="flex space-x-6 text-sm font-medium">
+                <a href="./prueba.html" class="hover:text-primary-blue transition duration-300">← Volver a Inicio</a>
+            </nav>
+        </div>
+    </header>
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-20">
+                <!-- Reportes Urbanos -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Reportes Urbanos y Accesibilidad en Alcorcón</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            Una ciudad limpia, segura y accesible comienza con la participación ciudadana.
+                            Esta plataforma permite a los vecinos de Alcorcón reportar de forma digital
+                            incidencias relacionadas con residuos urbanos, aceras en mal estado y
+                            barreras arquitectónicas, centralizando toda la información en un único sistema.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Reporte de acumulación de basura, vertidos y contenedores dañados.</li>
+                            <li>Notificación de aceras rotas, baldosas sueltas y pavimento deteriorado.</li>
+                            <li>Detección de barreras para personas con movilidad reducida.</li>
+                            <li>Seguimiento en tiempo real del estado de cada incidencia.</li>
+                            <li>Mejora de la limpieza, seguridad y accesibilidad del espacio público.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/pavimento.jpg" alt="Mapa de reportes urbanos y accesibilidad en Alcorcón" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+
+               
+                <!--Voluntariado-->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Voluntariado Ciudadano en Alcorcón</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            La participación ciudadana es clave para construir una ciudad más solidaria. 
+                            Este sistema conecta a personas voluntarias con iniciativas locales, 
+                            facilitando la colaboración en acciones sociales, medioambientales y comunitarias.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Inscripción sencilla en actividades de voluntariado locales.</li>
+                            <li>Colaboración en limpieza urbana, apoyo social y eventos comunitarios.</li>
+                            <li>Conexión directa con asociaciones y colectivos de Alcorcón.</li>
+                            <li>Fomento del compromiso social y la convivencia vecinal.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/voluntariado.jpg" alt="Sistema de voluntariado en Alcorcón" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+                <!-- Emergencia -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Botón de Emergencia Ciudadana</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            En situaciones críticas, cada segundo cuenta. 
+                            El botón de emergencia permite a los vecinos de Alcorcón 
+                            solicitar ayuda inmediata de forma rápida y accesible, 
+                            enviando su ubicación en tiempo real a los servicios correspondientes.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Activación rápida desde la aplicación con un solo toque.</li>
+                            <li>Envío automático de la ubicación exacta del usuario.</li>
+                            <li>Conexión directa con servicios de emergencia o atención municipal.</li>
+                            <li>Diseñado para personas mayores, situaciones de riesgo o urgencia.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/emergencia.jpg" alt="Botón de emergencia ciudadana en Alcorcón" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+                <!-- Informes -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Generación de Informes</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            La información es clave para tomar mejores decisiones. 
+                            El sistema de generación de informes transforma los reportes ciudadanos 
+                            en datos estructurados, permitiendo analizar el estado de Alcorcón 
+                            y priorizar actuaciones de forma eficiente.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Informes automáticos basados en incidencias registradas.</li>
+                            <li>Visualización de datos por zonas, tipología y fechas.</li>
+                            <li>Apoyo a la planificación y mejora de servicios municipales.</li>
+                            <li>Transparencia y seguimiento del impacto de las acciones.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/informes.jpg" alt="Generación de informes urbanos en Alcorcón" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+                
+                <!-- Match y Comunidades -->
+                <!-- Conexión y Recomendaciones -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Conexión por Afinidades y Recomendaciones</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            Cada persona vive Alcorcón de forma única. 
+                            Esta funcionalidad combina un sistema de match por afinidades con 
+                            recomendaciones personalizadas para ayudar a los vecinos a conectar entre sí, 
+                            descubrir grupos, eventos e iniciativas que encajan con sus intereses.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Match automático basado en intereses, aficiones y ubicación.</li>
+                            <li>Creación y descubrimiento de grupos temáticos y comunitarios.</li>
+                            <li>Recomendaciones personalizadas de eventos, comunidades y voluntariado.</li>
+                            <li>Experiencia adaptada a cada usuario dentro de un entorno local y seguro.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/match.png" alt="Conexión por afinidades y recomendaciones personalizadas" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+
+                <!-- Métricas -->
+                <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-800/60 p-8 md:p-12 rounded-3xl shadow-2xl">
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-bold mb-4 gradient-text">Métricas y Análisis de Impacto</h3>
+                        <p class="text-slate-300 text-lg mb-4">
+                            Medir el impacto permite mejorar continuamente. 
+                            El sistema de métricas ofrece una visión clara del uso de la plataforma, 
+                            la participación ciudadana y el impacto real de las acciones en Alcorcón.
+                        </p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2 ml-4">
+                            <li>Visualización de actividad, participación y crecimiento.</li>
+                            <li>Indicadores clave sobre reportes, comunidades y voluntariado.</li>
+                            <li>Datos útiles para la toma de decisiones estratégicas.</li>
+                            <li>Transparencia y evaluación del impacto ciudadano.</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-2">
+                        <img src="./imagenes/metricas.jpg" alt="Métricas y análisis de impacto" class="w-full rounded-xl shadow-2xl border-2 border-primary-blue/50">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-slate-950 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-6">
+                <span class="text-2xl font-bold gradient-text">Conec+a</span>
+            </div>
+            <p class="text-slate-500">&copy; 2025 Conecta App. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
