@@ -1,13 +1,19 @@
-const url = "https://hackathon.lausnchez.es/api/v1/eventosweb/";
-temporizador();
-getEventos()
-function getEventos(){
+
+const url = "https://hackathon.lausnchez.es/api/v1/eventosweb?page=";
+let numeroPagina = 1;
+
+getEventos(numeroPagina)
+
+function getEventos(numero){
     let hoy = new Date();
     let meses = [
         "ENE", "FEB", "MAR", "ABR", "MAY", "JUN",
         "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"
         ];
-    fetch(url)
+    document.querySelector("#numeroPagina").innerText = numero;
+    document.querySelector("#eventos").innerHTML = ""
+    temporizador();
+    fetch(url+numero)
     .then((response) => response.json())
     .then((datos) => {
         datos.forEach(dato => {
@@ -26,7 +32,7 @@ function getEventos(){
             let divDia = document.createElement("div");
             let spanDia = document.createElement("span");
             let spanMes = document.createElement("span");
-
+            
             let divDatos = document.createElement("div");
             let spanCategoria = document.createElement("span");
             let h3Nombre = document.createElement("h3");
@@ -73,7 +79,7 @@ function getEventos(){
                        spanCategoria.innerText += " ♿️"
                 }else{
                     spanCategoria.classList.add("text-[10px]", "font-bold", "uppercase", "tracking-wider", "text-indigo-700",
-                         "bg-indigo-100", "px-2", "py-1", "rounded")
+                         "bg-indigo-400/10", "px-2", "py-1", "rounded")
                     spanDia.classList.add("block", "text-2xl", "font-bold", "text-indigo-700")
                 } 
             }
@@ -82,7 +88,14 @@ function getEventos(){
         
     });
 }
+document.querySelector("#paginaMas").addEventListener("click",()=>{
+    pagMas();
+    
+})
 
+document.querySelector("#paginaMenos").addEventListener("click",()=>{
+    pagMenos();
+})
 
 function temporizador(){
     let timerInterval;
@@ -107,4 +120,18 @@ function temporizador(){
         console.log("I was closed by the timer");
   }
 });
+}
+
+function pagMas(){
+numeroPagina ++;
+getEventos(numeroPagina)
+}
+
+function pagMenos(){
+    if(numeroPagina == 1){
+
+    }else{
+        numeroPagina --;
+        getEventos(numeroPagina)
+    }
 }

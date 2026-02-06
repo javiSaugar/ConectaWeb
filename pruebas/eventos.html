@@ -20,15 +20,23 @@
             <a href="./prueba.html" class="text-sm text-slate-400 hover:text-white transition">← Volver al inicio</a>
         </div>
     </header>
-
     <main class="pt-24 pb-20 px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-10 text-center">Eventos <span class="gradient-text">Alcorcón</span></h2>
-
+            <div class="flex justify-center items-center gap-4 mb-10">                
+                <button id="paginaMenos" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800/70 border border-white/10 text-slate-300 hover:bg-slate-700 hover:text-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+                    −
+                </button>
+                <div id="numeroPagina" class="min-w-[3rem] text-center px-4 py-2 rounded-xl  bg-slate-900/80 border border-white/10 text-white font-semibold backdrop-blur-md">
+                    
+                </div>
+                <button id="paginaMas" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800/70 border border-white/10 text-slate-300 hover:bg-slate-700 hover:text-white transition">
+                    +
+                </button>
+            </div>
             <div id="eventos" class="space-y-4">
                 
             </div>
-
             <p class="text-center mt-12 text-slate-500 text-xs">
                  Estos eventos son informativos y están sujetos a cambios por los organizadores.
             </p>
