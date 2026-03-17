@@ -16,15 +16,13 @@ Swal.fire({
 document.querySelector("#btnAndroid").addEventListener("click",()=>{
         
    const link = document.createElement("a");
-    link.href = "./Apps/Conecta.apk"; // Asegúrate de que esta ruta sea accesible
+    link.href = "./Apps/Conecta.apk"; 
     link.download = "Conecta.apk";
     
-    // Añadimos esto por compatibilidad con algunos navegadores móviles
+
     link.style.display = "none";
     document.body.appendChild(link);
     
     link.click();
-    
-    // Limpieza
     document.body.removeChild(link);
 })
