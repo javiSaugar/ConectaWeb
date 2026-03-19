@@ -1,8 +1,4 @@
 
-document.querySelector("#btnDescargaAc").addEventListener("click", (e) => {
-    e.preventDefault(); 
-    mensajeError("Esta funcion no se encuentra implementada");
-})
 
 function mensajeError(mensaje){
     console.log("entra")
